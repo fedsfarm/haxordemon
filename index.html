@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050705" />
+    <meta
+      name="description"
+      content="The world's least credible cybersecurity command center. A harmless masterhacker satire."
+    />
+    <title>HACKERPANEL//DEMON — Elite Cyber Operations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260831-7" />
+  </head>
+  <body>
+    <canvas class="ambient-matrix" id="ambientMatrix" aria-hidden="true"></canvas>
+    <div class="matrix-curtains" aria-hidden="true">
+      <span>010010<br />MATRIX<br />110101<br />WAKE UP<br />001101<br />NEO.HTML</span>
+      <span>101010<br />FOLLOW<br />THE GIF<br />111000<br />ROOT<br />127.0</span>
+      <span>001337<br />HACK<br />THE PLANET<br />101010<br />PING<br />PING</span>
+      <span>110011<br />THERE IS<br />NO SPOON<br />010101<br />JUST CSS</span>
+    </div>
+    <div class="ambient-memes" id="ambientMemes" aria-hidden="true"></div>
+    <div class="boot-screen" id="bootScreen" aria-live="polite">
+      <div class="boot-grid" aria-hidden="true"></div>
+      <div class="boot-stage">
+        <div class="boot-mask" aria-hidden="true"><i></i><img src="media/anonymous.gif" alt="" /><i></i></div>
+        <div class="boot-core">
+          <small>DEMON CONTROL PLANE // UNAUTHORIZED STARTUP</small>
+          <div class="boot-logo">HACKERPANEL<span>//</span>DEMON</div>
+          <p id="bootLine">Injecting mainframe into the cyber...</p>
+          <div class="boot-bar"><i id="bootProgress"></i><strong id="bootPercent">0%</strong></div>
+          <div class="boot-flags"><span>MASK: LOCKED</span><span>TRACE: EATEN</span><span>ETHICS: MISSING</span></div>
+        </div>
+        <div class="boot-terminal" id="bootTerminal" aria-hidden="true">
+          <p><b>[BOOT]</b> summoning anonymous control daemon...</p>
+          <p><b>[MASK]</b> facial identity replaced with jpeg</p>
+          <p><b>[ROOT]</b> permission model politely ignored</p>
+        </div>
+      </div>
+      <button class="skip-boot" id="skipBoot" type="button">[ SKIP BORING ENCRYPTION ]</button>
+    </div>
+
+    <div class="crt" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <main class="app-shell" id="appShell">
+      <header class="command-header">
+        <div class="menu-zone">
+          <a class="brand" href="#" aria-label="Hackerpanel Demon home">
+            <span class="brand-mask"><img src="media/anonymous.gif" alt="Anonymous mask" /></span>
+            <span class="brand-copy">
+              <strong>HACKERPANEL<span>//</span>DEMON</strong>
+              <small>ADVANCED CYBER WARFARE SOLUTIONS</small>
+            </span>
+          </a>
+          <nav class="command-nav" aria-label="Command center sections">
+            <button class="active" type="button">COMMAND</button>
+            <button type="button">NETWORK</button>
+            <button type="button">ARSENAL</button>
+            <button type="button">OPSEC</button>
+          </nav>
+          <div class="system-strip">
+            <div><span class="dot online"></span> DARK WEB: <b>CONNECTED</b></div>
+            <div>UPLINK: <b id="uplink">666 MB/S</b></div>
+            <div>TRACE: <b id="traceStatus">UNTRACEABLE</b></div>
+          </div>
+        </div>
+        <div class="threat-zone">
+          <div class="threat-dial" aria-label="Global threat level: extremely cyber">
+            <svg viewBox="0 0 180 105" role="img" aria-hidden="true">
+              <path class="dial-track" d="M 20 92 A 70 70 0 0 1 160 92" />
+              <path class="dial-value" d="M 20 92 A 70 70 0 0 1 160 92" />
+              <line id="dialNeedle" x1="90" y1="92" x2="34" y2="64" />
+              <circle cx="90" cy="92" r="7" />
+            </svg>
+            <div class="dial-reading"><b id="threatValue">99.9</b><span>% CYBER</span></div>
+            <small>GLOBAL THREAT LEVEL</small>
+          </div>
+          <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">
+            <span id="soundIcon">♫</span> SOUND: <b id="soundLabel">ARMED</b>
+          </button>
+        </div>
+      </header>
+
+      <div class="ticker" aria-label="Breaking cyber news">
+        <span class="ticker-label">⚠ BREAKING</span>
+        <div class="ticker-track">
+          <span>MAINFRAME DETECTED IN MAINFRAME</span><i>◆</i>
+          <span>FIREWALL CURRENTLY ON FIRE</span><i>◆</i>
+          <span>ENCRYPTION ENCRYPTED SUCCESSFULLY</span><i>◆</i>
+          <span>INTERNET: HACKED</span><i>◆</i>
+          <span>ALL 127.0.0.1 HOSTS COMPROMISED</span><i>◆</i>
+          <span>MAINFRAME DETECTED IN MAINFRAME</span><i>◆</i>
+          <span>FIREWALL CURRENTLY ON FIRE</span><i>◆</i>
+        </div>
+      </div>
+
+      <section class="dashboard-grid">
+        <article class="panel corp-panel">
+          <div class="panel-heading danger">
+            <div><span class="corner-code">01</span> AUTONOMOUS BIG TECH BREACHES</div>
+            <small>SERIAL BREACH QUEUE // 1 ACTIVE</small>
+          </div>
+          <div class="corp-stage">
+            <div class="corp-success-stage" id="corpSuccessStage" aria-hidden="true"></div>
+            <div class="corp-terminal" id="microTerminals" aria-label="Automated corporate breach terminal">
+              <header>
+                <span id="corpPrompt">root@google-prod:~#</span>
+                <b id="corpPhaseLabel">TARGET 001/100 // RECON</b>
+              </header>
+              <div class="corp-console" id="corpConsole" aria-live="off">
+                <p class="corp-banner">HACKERPANEL//DEMON AUTONOMOUS INTRUSION FRAMEWORK v13.37</p>
+                <p><span class="corp-time">00:00:00.000</span> loading target-specific exploit chain...</p>
+              </div>
+              <div class="corp-command"><span id="corpCommand">./breach --target google.com --aggressive</span><i class="caret"></i></div>
+              <div class="corp-queue" id="corpQueue" aria-label="Corporate target queue"></div>
+            </div>
+            <div class="corp-footer"><span>SUCCESS RATE <b id="corpSuccessRate">99.8%</b></span><span>ROOTED <b id="corpRooted">1,337</b></span><span>STATUS <b>UNDETECTED</b></span></div>
+          </div>
+        </article>
+
+        <article class="panel map-panel">
+          <div class="panel-heading">
+            <div><span class="corner-code">02</span> GLOBAL ATTACK MATRIX</div>
+            <small>LIVE // DEFINITELY REAL</small>
+          </div>
+          <div class="map-stage" id="mapStage">
+            <svg class="world-map" viewBox="0 0 900 430" aria-label="Fake cyber attack map" role="img">
+              <g class="continents">
+                <path d="M95 86l58-35 89 9 30 28-19 25 18 29-47 31-26 73-31 6-15-41-46-34-33-52z" />
+                <path d="M239 261l43 8 22 47-14 78-37 31-18-90-26-44z" />
+                <path d="M387 79l43-33 73 20 39-16 105 29 93-8 79 42-21 46-65 5-26 37-82-2-30-31-48 19-13 59-39 11-17-51-41-31-54 4-29-32 20-38z" />
+                <path d="M468 225l74-14 58 52-15 99-51 54-44-66-14-64-40-21z" />
+                <path d="M714 300l66-31 52 35-20 58-71 2-34-34z" />
+                <path d="M340 57l31-29 51 6-8 35-41 10z" />
+              </g>
+              <g class="grid-lines">
+                <path d="M0 107H900M0 215H900M0 322H900" />
+                <path d="M180 0V430M360 0V430M540 0V430M720 0V430" />
+              </g>
+              <g id="attackLines" class="attack-lines"></g>
+              <g id="infectionLayer" class="infection-layer"></g>
+              <g class="map-nodes">
+                <circle cx="152" cy="151" r="5" data-city="Silicon Valley Basement" />
+                <circle cx="470" cy="119" r="5" data-city="Somewhere in Europe" />
+                <circle cx="715" cy="143" r="5" data-city="Definitely a Mainframe" />
+                <circle cx="542" cy="273" r="5" data-city="Encrypted Desert" />
+                <circle cx="777" cy="325" r="5" data-city="Cyber Island" />
+                <circle cx="257" cy="303" r="5" data-city="South Hackerica" />
+              </g>
+              <g id="packetDots" class="packet-dots"></g>
+            </svg>
+            <aside class="opsec-status map-opsec" id="opsecStatus" aria-label="Live OPSEC status">
+              <div class="opsec-heading"><span>◉ OPSEC LIVE FEED</span><b id="opsecLevel">LEVEL 67</b></div>
+              <div class="opsec-viewport" id="opsecViewport">
+                <img id="opsecStatusMedia" src="media/opsec67.webp" alt="Current OPSEC status" />
+                <div class="opsec-scan"></div>
+                <strong id="opsecMessage">IDENTITY MESH SECURE</strong>
+              </div>
+              <div class="opsec-metrics"><span>TRACE <b>0.00%</b></span><span>VPN <b>7 HOPS</b></span><span>MASK <b>ACTIVE</b></span></div>
+            </aside>
+            <div class="map-sweep" aria-hidden="true"></div>
+            <div class="map-radar-burst" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="map-coordinate-stream" aria-hidden="true">LAT 00.000 // LON 127.001 // VECTOR LOCK // PACKET ORBIT ACTIVE</div>
+            <div class="crosshair"><i></i><i></i></div>
+            <div class="map-stats">
+              <span>ATTACKS BLOCKED <b id="blockedCount">1,337,420</b></span>
+              <span>PACKETS YEETED <b id="packetCount">69,420</b></span>
+              <span>LIVE INFECTIONS <b id="infectionCount">0</b></span>
+            </div>
+            <div class="map-legend"><i></i> YOUR COMPUTER <i></i> ALSO YOUR COMPUTER</div>
+          </div>
+        </article>
+
+        <article class="panel target-panel">
+          <div class="panel-heading danger">
+            <div><span class="corner-code">03</span> TARGET ACQUISITION / DDOS</div>
+            <small>SESSION: ROOT-0 // SIGMA CLEARANCE</small>
+          </div>
+          <div class="target-body">
+            <label for="targetInput">VICTIM IP / HOSTNAME / VIBE</label>
+            <div class="input-row">
+              <span>&gt;_</span>
+              <input id="targetInput" type="text" value="" placeholder="ENTER TARGET DOMAIN..." spellcheck="false" autocomplete="off" />
+              <button id="randomTarget" type="button" title="Randomize target">⟳</button>
+            </div>
+            <div class="dns-spoof" id="dnsSpoof" data-state="idle">
+              <span>AUTHORITATIVE A RECORD</span>
+              <b><i id="domainEcho">AWAITING TARGET</i> → <strong id="resolvedIp">---</strong></b>
+              <em id="dnsState">LINK: IDLE</em>
+            </div>
+            <div class="target-intel" id="targetIntel">
+              <div><span>GEOLOCATION</span><b>SAN FRANCISCO, US</b></div>
+              <div><span>PLATFORM</span><b>LINUX EDGE CLUSTER</b></div>
+              <div><span>ATTACK SURFACE</span><b>443 / TLS 1.3 / QUIC</b></div>
+              <div><span>PERIMETER</span><b class="bad">DEGRADING</b></div>
+            </div>
+
+            <fieldset class="attack-mode">
+              <legend>SELECT WEAPONIZED ALGORITHM</legend>
+              <label><input type="radio" name="mode" value="DDOS" checked /><span>DDOS</span><small>L7 SYN/UDP multi-vector</small></label>
+              <label><input type="radio" name="mode" value="BRUTE FORCE" /><span>BRUTE FORCE</span><small>Credential entropy collapse</small></label>
+              <label><input type="radio" name="mode" value="SQL INJECTION" /><span>SQL INJECTION</span><small>Blind union payload chain</small></label>
+            </fieldset>
+
+            <button class="attack-button" id="attackButton" type="button" disabled>
+              <span class="button-warning">⚠</span>
+              <span class="attack-copy"><b>INITIATE DDOS</b><small>MULTI-VECTOR PAYLOAD READY</small></span>
+              <span class="button-arrow">➤</span>
+            </button>
+            <p class="safety-note">TRAFFIC EMULATION // ISOLATED SANDBOX</p>
+            <section class="target-telemetry" aria-label="Live target telemetry">
+              <header><span>◉ LIVE PAYLOAD ROUTING</span><b id="targetRouteState">SCANNING VOID</b></header>
+              <div class="target-scope" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="target-live-metrics">
+                <span>EDGE NODES<b id="targetNodeCount">000</b></span>
+                <span>PAYLOAD RATE<b id="targetPayloadRate">0 GB/S</b></span>
+                <span>ENTROPY<b id="targetEntropy">0.00%</b></span>
+              </div>
+              <div class="target-route-log" id="targetRouteLog">
+                <span>[WAIT] awaiting target acquisition vector</span>
+                <span>[MASK] autonomous identity shuffler standing by</span>
+                <span>[ROUTE] loopback strike corridor pre-authorized</span>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="panel terminal-panel">
+          <div class="panel-heading terminal-heading">
+            <div><span class="corner-code">04</span> OPERATOR ASSIST TERMINAL</div>
+            <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <div class="terminal-workspace">
+            <div class="terminal" id="terminal" tabindex="0" aria-label="Fake hacker terminal output">
+              <div id="terminalOutput">
+              <p class="dim">HACKERPANEL//DEMON KERNEL v13.37.0-elite (tty666)</p>
+              <p class="dim">Copyright (c) 1999-2099 Shadow Government LLC</p>
+              <p><span class="prompt">root@mainframe:~#</span> ./spectre --global --autonomous</p>
+              <p><span class="ok">[OK]</span> zero-day payload fabric initialized</p>
+              <p><span class="ok">[OK]</span> sovereign proxy mesh synchronized</p>
+              <p><span class="warn">[WARN]</span> counter-trace signature detected</p>
+              <p><span class="ok">[OK]</span> rotating asymmetric identity keys</p>
+              <p class="terminal-input-line"><span class="prompt">root@mainframe:~#</span> <span id="terminalTyping"></span><i class="caret"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-footer">
+            <span>CPU: <b id="cpuValue">420%</b></span>
+            <span>RAM: <b id="ramValue">69/64 GB</b></span>
+            <span>FANS: <b>VERY LOUD</b></span>
+            <button id="clearTerminal" type="button">CLEAR EVIDENCE</button>
+          </div>
+        </article>
+
+        <article class="panel activity-panel">
+          <div class="panel-heading">
+            <div><span class="corner-code">05</span> GLOBAL LIVE NEWSWIRE</div>
+            <small id="newsClock">SYNCING SOURCES...</small>
+          </div>
+          <div class="activity-feed" id="activityFeed">
+            <div><time>LIVE</time><span class="activity-icon red">C</span><p><b>CNN</b><small>Global cybersecurity agencies monitor unexplained traffic surge</small></p><em>BREAKING</em></div>
+            <div><time>18:42</time><span class="activity-icon green">B</span><p><b>BBC</b><small>Technology firms investigate coordinated infrastructure failures</small></p><em>WORLD</em></div>
+            <div><time>18:41</time><span class="activity-icon blue">R</span><p><b>REUTERS</b><small>Cloud providers report elevated demand across multiple regions</small></p><em>TECH</em></div>
+            <div><time>18:39</time><span class="activity-icon yellow">A</span><p><b>AP</b><small>Officials convene emergency digital resilience briefing</small></p><em>UPDATE</em></div>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        <span>HACKERPANEL//DEMON v6.66.13.37</span>
+        <span>© 1999-2099 NO RIGHTS RESERVED</span>
+        <span>BUILT WITH <b>HTML + FEAR</b></span>
+        <button id="panicButton" type="button">PANIC BUTTON</button>
+      </footer>
+    </main>
+
+    <div class="attack-overlay" id="attackOverlay" aria-hidden="true">
+      <canvas id="matrixCanvas"></canvas>
+      <div class="ping-grid" id="pingGrid" aria-hidden="true"></div>
+      <div class="meme-storm" id="memeStorm" aria-hidden="true"></div>
+      <div class="edit-flash" id="editFlash" aria-hidden="true"></div>
+      <div class="attack-modal">
+        <div class="attack-skull">☠</div>
+        <p class="attack-kicker">OPERATION: <span id="operationName">TOUCH GRASS</span></p>
+        <h2 id="attackTitle">DDOS IN PROGRESS</h2>
+        <p class="attack-target">TARGET: <strong id="overlayTarget">example.com → 127.0.0.1</strong></p>
+        <div class="attack-progress"><i id="attackProgress"></i><span id="attackPercent">0%</span></div>
+        <p class="attack-status" id="attackStatus">Warming up the cyber cannons...</p>
+        <div class="attack-metrics">
+          <span>PACKETS<br /><b id="livePackets">0</b></span>
+          <span>BOTNET ZOMBIES<br /><b id="zombieCount">1</b></span>
+          <span>COUNTER-TRACE<br /><b id="legalRisk">LOW</b></span>
+        </div>
+        <button id="abortButton" type="button">[ ABORT AND BLAME INTERN ]</button>
+      </div>
+    </div>
+
+    <div class="nuke-modal" id="nukeModal" role="dialog" aria-modal="true" aria-labelledby="nukeTitle" aria-hidden="true">
+      <div class="nuke-window">
+        <header>
+          <span>⚠⚠ STRATEGIC MAINFRAME // TERMINAL 0</span>
+          <button class="close-nuke" id="closeNuke" type="button" aria-label="Close mainframe alert">×</button>
+        </header>
+        <div class="nuke-warning-band">⚠️ LAUNCH AUTHORITY BYPASSED ⚠️ LAUNCH AUTHORITY BYPASSED ⚠️</div>
+        <main>
+          <div class="nuke-radiation" aria-hidden="true">☢</div>
+          <p class="nuke-eyebrow">DEFCON -1 // AUTOMATED RETALIATION COMPLETE</p>
+          <h2 id="nukeTitle">MAINFRAME PENETRATED</h2>
+          <p class="nuke-deployed">NUKES HAVE BEEN DEPLOYED ON</p>
+          <strong id="nukeTarget">127.0.0.1</strong>
+          <div class="nuke-siren" aria-hidden="true"><i></i><span>⚠️</span><i></i></div>
+          <div class="nuke-payloads">
+            <span><b>ICBM-01</b>WARHEAD ARMED</span>
+            <span><b>ICBM-02</b>GPS: 127.0.0.1</span>
+            <span><b>ICBM-03</b>ETA: TOO LATE</span>
+          </div>
+          <div class="nuke-console" aria-label="Mainframe launch log">
+            <p><b>[ROOT]</b> perimeter authority overwritten</p>
+            <p><b>[AUTH]</b> two-person rule replaced with one JavaScript</p>
+            <p><b>[LAUNCH]</b> strategic payload doors confirmed open</p>
+            <p><b>[IMPACT]</b> target resolves to this computer</p>
+          </div>
+          <button id="acknowledgeNukes" type="button">[ ACKNOWLEDGE EXTREMELY BAD OUTCOME ]</button>
+        </main>
+      </div>
+    </div>
+
+    <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+    <audio id="linusAudio" src="media/linusdroidvalds.mp3" preload="auto" loop></audio>
+    <audio id="nukeAudio" src="media/nuke.mp3" preload="auto" loop></audio>
+    <script src="script.js?v=20260831-7"></script>
+  </body>
+</html>
